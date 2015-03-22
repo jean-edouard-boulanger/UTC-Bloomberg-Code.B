@@ -22,7 +22,7 @@ def count_books_to_read(friends, source, books, max_separation_degree):
             current_person_friends = friends[current_person]
             for friend in current_person_friends:
                 if friend not in explored:
-                    to_explore.append(friend)
+                    to_explore.insert(0, friend)
 
         if current_person in books:
             current_person_books = books[current_person]
